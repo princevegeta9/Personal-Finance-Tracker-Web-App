@@ -52,7 +52,7 @@ input[type="date"] {
    border-radius: 4px;
 }
 
-.btn{
+.btn , #btn{
     background-color: #5c6bc0;
     color: white;
     border: none;
@@ -62,7 +62,7 @@ input[type="date"] {
     border-radius: 4px;
 }
 
-.btn:hover{
+.btn:hover ,#btn:hover{
     background-color: #3f51b5;
 }
 
@@ -93,6 +93,10 @@ input[type="date"] {
 
 .transaction-list .income {
     color: green;
+}
+
+.l{
+    margin-top: 5px;
 }
 
 .summary{
