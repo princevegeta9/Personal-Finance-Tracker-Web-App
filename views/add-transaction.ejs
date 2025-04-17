@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        form{
+            margin-right: 25px;
+        }
+        .container input,.container button{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .container button {
+            justify-content: center;
+            background-color: #28a745;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-left: 12px;
+            transition: background-color 0.3s;
+        }
+        .container button:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add new transaction</h2>
+        <form action="/add" method="post">
+            <input type="text" name="title" placeholder="transaction title" required>
+            <input type="number" name="amount" placeholder="enter amount" required>
+            <input type="date" name="date" required>
+            <button type="submit">Add Transaction</button>
+        </form>
+        <a href="/" class="back-link">← Back to Dashboard</a>
+    </div>
+</body>
+</html>

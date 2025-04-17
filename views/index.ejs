@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track finance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <header>
+        <h1>Personal Finance Tracker</h1>
+        <nav>
+            <a href="/add-transaction" class="btn">Add Transaction</a>
+            <a href="/logout" class="btn">Logout</a>
+        </nav>
+       </header>
+       <div class="transaction_list">
+        <h2>Recent Transaction</h2>
+        <% transactions.forEach(transaction => { %>
+            <div class="transaction_card">
+                <h3><%= transaction.title %></h3>
+                <p>Amount: ₹<%= transaction.amount %></p>
+                <p>Date: <%= transaction.date.toISOString().slice(0, 10) %></p>
+                <form action="/delete/<%= transaction.id %>" method="POST">
+                    <button type="submit" class="btn_delete">Delete</button>
+                </form>
+            </div>
+          <% }) %>
+       </div>
+       <footer>
+        <p>Created by Mohit</p>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
